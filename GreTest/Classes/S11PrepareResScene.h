@@ -13,7 +13,7 @@
 #include <string.h>
 #include <map>
 #include "cocos-ext.h"
-
+//
 class S11PrepareRes : public cocos2d::CCLayer, public cocos2d::extension::CCTableViewDataSource, public cocos2d::extension::CCTableViewDelegate
 {
 public:
