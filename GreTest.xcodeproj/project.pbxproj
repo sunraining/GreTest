@@ -243,6 +243,7 @@
 		689B27DE1716FE8D00FEBDC8 /* S1MainScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 689B27D51716FE8D00FEBDC8 /* S1MainScene.cpp */; };
 		689C00EF171D98E3003A8020 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 689C00EE171D98E3003A8020 /* Default-568h@2x.png */; };
 		68F6714B1726DBEC007A69FF /* CustomTableViewCell.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 68F671491726DBEC007A69FF /* CustomTableViewCell.cpp */; };
+		D2D64C5A1754E9000068D40B /* S2Practice.plist in Resources */ = {isa = PBXBuildFile; fileRef = D2D64C591754E8FF0068D40B /* S2Practice.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -752,6 +753,7 @@
 		689C00EE171D98E3003A8020 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		68F671491726DBEC007A69FF /* CustomTableViewCell.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CustomTableViewCell.cpp; path = Classes/CustomTableViewCell.cpp; sourceTree = "<group>"; };
 		68F6714A1726DBEC007A69FF /* CustomTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CustomTableViewCell.h; path = Classes/CustomTableViewCell.h; sourceTree = "<group>"; };
+		D2D64C591754E8FF0068D40B /* S2Practice.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = S2Practice.plist; path = Classes/S2Practice.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1757,6 +1759,7 @@
 			children = (
 				680CB92A1742613A0000AAC2 /* S2PracticeScene.cpp */,
 				680CB92B1742613A0000AAC2 /* S2PracticeScene.h */,
+				D2D64C591754E8FF0068D40B /* S2Practice.plist */,
 				680CB92C1742613A0000AAC2 /* S2SettingScene.cpp */,
 				680CB92D1742613A0000AAC2 /* S2SettingScene.h */,
 				680CB92E1742613A0000AAC2 /* S2TestScene.cpp */,
@@ -1872,6 +1875,7 @@
 				680E068D173948C8005C602D /* s11TableCellTxt2.txt in Resources */,
 				680E068E173948C8005C602D /* s11TableCellTxt3.txt in Resources */,
 				680CB9451742730F0000AAC2 /* Psetting.plist in Resources */,
+				D2D64C5A1754E9000068D40B /* S2Practice.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

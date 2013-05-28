@@ -1,6 +1,7 @@
 #include "S2PracticeScene.h"
 #include "AppMacros.h"
 #include "S1MainScene.h"
+#include "ScriptParser.h"
 using namespace cocos2d;
 
 
@@ -10,14 +11,12 @@ using namespace cocos2d;
 #define rate1 1.0
 #define rate2 1.0
 
+#define classPlistName_macro "S2Practice.plist"
+
 #define s2FontSize1_macro 40.0//title1
 #define s2FontSize2_macro 16.0//title2
 #define s2FontSize3_macro 40.0//title3
 
-#define s2Position1_macro(aItem)    ccp(origin.x+visibleSize.width/2/rate1,origin.y+1452/rate2)//title1
-#define s2Positionp2_macro(aSprite) ccp(origin.x+visibleSize.width/2,origin.y+1452/rate2)//navbar
-#define s2Position3_macro(aItem)    ccp(origin.x+85/rate1,origin.y+1452/rate2)//backitem
-#define s2Position4_macro(aItem)    ccp(origin.x+1998/rate1,origin.y+1452/rate2)//pRecButton
 #define s2Position5_macro(aSprite)  ccp(origin.x+1656/rate1,origin.y+850/rate2)//PracticeList
 #define s2Position6_macro(aItem)    ccp(origin.x+1600/rate1,origin.y+0/rate2)//cell后面的的label位置 selftest
 #define s2Position7_macro(aSprite)  ccp(origin.x+1024/rate1,origin.y+1072/rate2)//tableview background image
@@ -75,7 +74,7 @@ bool S2PracticeScene::init()
 
 		this->addChild(_menu, 2);
 
-        
+        plistDic = CCDictionary::createWithContentsOfFile(classPlistName_macro);
         
         //*****************背景图/ NavBar/ Title*****************//
 		{
@@ -88,14 +87,14 @@ bool S2PracticeScene::init()
         
         {
 			CCSprite * aSprite = CCSprite::create("pNavBar.png");
-			aSprite->setPosition(s2Positionp2_macro(aSprite));
+            aSprite->setPosition(ScriptParser::getPositionFromPlist(plistDic,"pNavBar"));
             //CC_BREAK_IF(! aSprite);
 			this->addChild(aSprite,1);
 		}
         
         {
             CCLabelTTF * titleLabel = CCLabelTTF::create("Practice 1", "Arial", s2FontSize1_macro);
-            titleLabel->setPosition(s2Position1_macro(aItem));
+            titleLabel->setPosition(ScriptParser::getPositionFromPlist(plistDic,"titleLabel"));
             //CC_BREAK_IF(! aSprite);
             this->addChild(titleLabel,1);
         }
@@ -111,12 +110,12 @@ bool S2PracticeScene::init()
                 this,
                 menu_selector(S2PracticeScene::menuOnBackCallback));
 			CC_BREAK_IF(! aItem);
-			aItem->setPosition(s2Position3_macro(aItem));
+            aItem->setPosition(ScriptParser::getPositionFromPlist(plistDic,"pBackIcon"));
 			_menu ->addChild(aItem,1);
             
             {
                 CCLabelTTF *label_back = CCLabelTTF::create("Practice", "Arial", s2FontSize2_macro, sprite1->getContentSize(), kCCTextAlignmentCenter, kCCVerticalTextAlignmentCenter);
-                label_back->setPosition(s2Position3_macro(aItem));
+                label_back->setPosition(ScriptParser::getPositionFromPlist(plistDic,"pBackIcon"));
                 this ->addChild(label_back,2);
             }
 		}
@@ -132,7 +131,7 @@ bool S2PracticeScene::init()
 				this,
                                                                menu_selector(S2PracticeScene::menuShowPracticeList));
 			CC_BREAK_IF(! aItem);
-			aItem->setPosition(s2Position4_macro(aItem));
+            aItem->setPosition(ScriptParser::getPositionFromPlist(plistDic, "pRectIcon"));
 			_menu ->addChild(aItem,1);
 		}
         

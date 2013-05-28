@@ -22,6 +22,9 @@ public:
 public:
     int sceneNum;
     
+    
+    cocos2d::CCDictionary* plistDic;
+    
     vector<string> aVectorCellValue;
     vector<string> aVectorCellSmallValue;
     
